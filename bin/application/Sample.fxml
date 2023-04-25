@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="700.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <TextField fx:id="guess" layoutX="114.0" layoutY="168.0" onAction="#checkGuess" promptText="Make a guess" text="100">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </TextField>
+      <Text layoutX="123.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make a guess from 0 - 100">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text fill="#5cf1ff" layoutX="80.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number guessing game" textAlignment="CENTER" wrappingWidth="458.8097839355469">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.3629629611968994" green="0.9681481719017029" blue="1.0" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Text>
+      
+      <ImageView fx:id="upArrow" fitHeight="319.0" fitWidth="342.0" layoutX="125.0" layoutY="241.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../../../../Users/priya/OneDrive/Pictures/GGpics/Up1.png" />
+         </image>
+      </ImageView>
+
+      <ImageView fx:id="downArrow" fitHeight="319.0" fitWidth="342.0" layoutX="125.0" layoutY="241.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../../../../Users/priya/OneDrive/Pictures/GGpics/Down1.png" />
+         </image>
+      </ImageView>
+
+      <ImageView fx:id="correct" fitHeight="319.0" fitWidth="342.0" layoutX="134.0" layoutY="251.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../../../../Users/priya/OneDrive/Pictures/GGpics/tick.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="576.0" layoutY="35.0" mnemonicParsing="false" onAction="#reset" prefHeight="40.0" prefWidth="53.0" text="Reset" />
+      <Text fx:id="guessCounterText" layoutX="256.0" layoutY="619.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guesses: 0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Label fx:id="Chances" alignment="CENTER" layoutX="124.0" layoutY="641.0" prefHeight="32.0" prefWidth="362.0" text="You have 5 chances to guess!!!" textFill="#e70909">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="hint" layoutX="507.0" layoutY="105.0" mnemonicParsing="false" onAction="#hint_Click" prefHeight="40.0" prefWidth="78.0" text="Hint" textFill="#ff1313">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
